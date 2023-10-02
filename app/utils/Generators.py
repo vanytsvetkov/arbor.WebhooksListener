@@ -22,7 +22,8 @@ from models import (
     PacketSize
 )
 
-from utils import format_value, whois
+from utils.Formatters import format_value
+from utils.utils import whois
 
 
 def gen_trafficQuery(unit: str, blob_id: int | str) -> dict:
