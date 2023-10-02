@@ -40,7 +40,7 @@ class PacketSize(BaseModel):
 class Pattern(BaseModel):
     src: str = ''
 
-    @validator('payload')
+    @validator('src')
     def set_src(cls, src):
         if src == '0.0.0.0/0':
             src = 'Highly Distributed'
