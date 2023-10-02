@@ -19,3 +19,4 @@ uvicorn==0.22.0
 jinja2==3.1.2
 numpy==1.23.3
 matplotlib==3.6.2
+netmiko==4.2.0
