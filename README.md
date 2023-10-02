@@ -35,4 +35,4 @@ $ docker compose -f docker/docker-compose.yml logs -f
 ```
 
 ## Webhooks Processing Schema
-![webhooks](payload/webhooks.svg)
+![webhooks](payload/webhooks.png)
