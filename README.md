@@ -16,14 +16,18 @@ vim docker/docker-iptables.sh
 cp -r <path_to_your_certfile>/ssl_certfile.crt <path_to_your_keyfile>/ssl_keyfile.key app/certs
 ```
 
-#### 2. Prepare drop-in Docker logic
+#### 2. Prepare drop-in Docker logic and check fw rules
 ```shell
-$ ln -s docker/docker-iptables.sh /etc/docker/docker-iptables.sh
-$ ln -s docker/restart-docker-iptables.conf /etc/systemd/system/docker.service.d/restart-docker-iptables.conf
+$ chmod +x docker/docker-iptables.sh
+
+$ ln -s $(pwd)/docker/docker-iptables.sh /etc/docker/docker-iptables.sh
+$ ln -s $(pwd)/docker/restart-docker-iptables.conf /etc/systemd/system/docker.service.d/restart-docker-iptables.conf
 
 $ systemctl daemon-reload
 
 $ systemctl restart docker
+
+$ iptables -S
 ```
 
 #### 3. Running  
