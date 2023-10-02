@@ -19,7 +19,7 @@ class D42API:
         return f'Basic {encoded_credentials.decode("ascii")}'
 
     def request(self, api_method, method, params, **kwargs) -> dict:
-        response = self.requestsSession.request(method, f'{self.creds.d42.url}/api/1.0/{api_method}', params, **kwargs)
+        response = self.requestsSession.request(method, f'https://{self.creds.d42.url}/api/1.0/{api_method}', params, **kwargs)
         match response.status_code:
             case 200 | 500:
                 return response.json()
