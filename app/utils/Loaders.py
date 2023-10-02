@@ -22,7 +22,7 @@ def load_datafiles(directory) -> dict:
         udp_port_lookup = json.load(udp_port_lookup_file)
 
     country_flags = {}
-    for file_path in glob.glob(f'{directory}/{vars.DATA_DIR}/data/flags/*.png'):
+    for file_path in glob.glob(f'{directory}/app/{vars.DATA_DIR}/flags/*.png'):
         country = os.path.splitext(os.path.basename(file_path))[0]
         with open(file_path, 'rb') as flag_file:
             country_flags[country.upper()] = base64.b64encode(flag_file.read()).decode("utf-8")
