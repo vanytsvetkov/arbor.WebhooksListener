@@ -1,0 +1,5 @@
+/app/certs/*.crt
+/app/certs/*.key
+/app/data/credentials.json
+/app/tests
+/venv

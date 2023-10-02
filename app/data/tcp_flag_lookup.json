@@ -1,0 +1,10 @@
+{
+    "S": "SYN",
+    "A": "ACK",
+    "F": "FIN",
+    "R": "RST",
+    "P": "PSH",
+    "U": "URG",
+    "E": "ECN",
+    "C": "CWR"
+}
