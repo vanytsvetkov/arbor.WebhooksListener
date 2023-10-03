@@ -3,3 +3,4 @@
 /app/data/credentials.json
 /app/tests
 /venv
+**/__pycache__/
